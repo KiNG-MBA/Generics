@@ -33,5 +33,11 @@ public class PrintArray {
         System.out.println("#########################");
     }
 
+    public static void printArray(String[] text) {
+        for (String texts : text) {
+            System.out.print(texts + " // ");
+        }
+    }
+
 
 }
