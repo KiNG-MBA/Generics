@@ -14,29 +14,37 @@ public class PrintArray {
 
     }
 
+    // write a generics method
     public static <G> void printArray(G[] array) {
+        //print array
         for (G arrays : array) {
             System.out.print(arrays + " || ");
         }
-        System.out.println();
+        System.out.println("\n+++++++++++++++++++++++++");
 
     }
 
+    // overload method with different parameter
     public static <G> void printArray(G[] array, int lowSubscript, int highSubscript) {
+        //check index value
         if (lowSubscript < 0 || highSubscript > array.length-1) {
             throw new IllegalArgumentException("Out of array range");
         }
 
+        //print array
         for (int i = lowSubscript; i <highSubscript ; i++) {
             System.out.print(array[i]+" * ");
         }
-        System.out.println("#########################");
+        System.out.println("\n#########################");
     }
 
+    // overload method as not generics
     public static void printArray(String[] text) {
+        //print array
         for (String texts : text) {
             System.out.print(texts + " // ");
         }
+        System.out.println("\n*************************");
     }
 
 
